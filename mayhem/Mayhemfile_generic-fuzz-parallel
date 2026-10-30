@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-parallel
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-parallel
+    libfuzzer: true
+    timeout: 10

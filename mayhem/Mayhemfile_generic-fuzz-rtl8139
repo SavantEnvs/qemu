@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-rtl8139
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-rtl8139
+    libfuzzer: true
+    timeout: 10

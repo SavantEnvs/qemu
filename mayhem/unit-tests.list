@@ -1,0 +1,14 @@
+# qemu unit tests built by build.sh and run by test.sh: every deterministic, single-process g_test binary that
+# tests/unit/meson.build builds unconditionally. Left out on purpose:
+#   rcutorture, test-rcu-list, test-rcu-simpleq, test-rcu-tailq, test-rcu-slist - stress tests whose outcome
+#     depends on thread scheduling and wall-clock time (not deterministic).
+#   every test that tests/unit/meson.build builds only under `if have_system / have_block / have_ga` (block, crypto,
+#     io, aio, vmstate, ...) - the criterion is the unconditional set; the system-side device code is covered by
+#     the qtests in mayhem/qtests.list.
+UNIT_TESTS="check-block-qdict check-json-parser check-qdict check-qjson check-qlist check-qlit check-qnull
+check-qnum check-qobject check-qom-interface check-qom-proplist check-qstring
+test-bitcnt test-bitmap test-bitops test-clone-visitor test-cutils test-div128 test-envlist
+test-error-report test-fifo test-forward-visitor test-int128 test-interval-tree test-keyval test-logging
+test-mul64 test-qapi-util test-qdist test-qemu-opts test-qgraph test-qht test-qobject-input-visitor
+test-qobject-output-visitor test-qtree test-resv-mem test-shift128 test-string-input-visitor
+test-string-output-visitor test-visitor-serialization test-x86-topo"

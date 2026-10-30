@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-cirrus-vga
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-cirrus-vga
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-pcnet
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-pcnet
+    libfuzzer: true
+    timeout: 10

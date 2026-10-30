@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-virtio-net-pci-slirp
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-virtio-net-pci-slirp
+    libfuzzer: true
+    timeout: 10

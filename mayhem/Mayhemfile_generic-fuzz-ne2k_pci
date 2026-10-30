@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-ne2k_pci
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-ne2k_pci
+    libfuzzer: true
+    timeout: 10

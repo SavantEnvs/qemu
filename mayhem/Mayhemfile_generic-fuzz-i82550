@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-i82550
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-i82550
+    libfuzzer: true
+    timeout: 10
