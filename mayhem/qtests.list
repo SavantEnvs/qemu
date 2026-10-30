@@ -1,0 +1,12 @@
+# qtests (tests/qtest) built by build.sh and run by test.sh against build/tests/qemu-system-i386, built with the
+# normal flags. Each starts its own short-lived qemu through libqtest and asserts guest-visible device behavior.
+#   qos-test         the whole libqos graph for i386: e1000, e1000e, i8255x, pcnet, ne2k_pci, vmxnet3, virtio-blk,
+#                    virtio-net, virtio-scsi, virtio-rng, virtio-serial, virtio-balloon, virtio-9p, megasas, sdhci,
+#                    nvme, ufs, ...; its slow tests are skipped by qemu itself (no `-m slow`)
+#   ide-test ahci-test fdc-test rtl8139-test am53c974-test intel-hda-test usb-hcd-ehci-test usb-hcd-uhci-test
+#   tco-test display-vga-test   the stand-alone device qtests for the other fuzzed device families
+# Not run: the qtests that boot a guest or need a network, a migration peer, firmware blobs or privileges
+# (migration-test, bios-tables-test, boot-serial-test, pxe-test, qom-test, device-introspect-test, ...): slow,
+# and they test machine plumbing rather than the fuzzed device models.
+QTESTS="qos-test ide-test ahci-test fdc-test rtl8139-test am53c974-test intel-hda-test usb-hcd-ehci-test
+usb-hcd-uhci-test tco-test display-vga-test"

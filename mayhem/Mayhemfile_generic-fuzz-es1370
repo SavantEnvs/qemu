@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-es1370
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-es1370
+    libfuzzer: true
+    timeout: 10
