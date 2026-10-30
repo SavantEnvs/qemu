@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-e1000e
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-e1000e
+    libfuzzer: true
+    timeout: 10

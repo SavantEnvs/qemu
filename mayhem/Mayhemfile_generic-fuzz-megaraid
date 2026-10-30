@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-megaraid
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-megaraid
+    libfuzzer: true
+    timeout: 10

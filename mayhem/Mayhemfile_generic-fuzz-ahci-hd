@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-ahci-hd
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-ahci-hd
+    libfuzzer: true
+    timeout: 10
