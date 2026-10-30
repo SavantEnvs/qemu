@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-pc-i440fx
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-pc-i440fx
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-virtio-9p-synth
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-virtio-9p-synth
+    libfuzzer: true
+    timeout: 10

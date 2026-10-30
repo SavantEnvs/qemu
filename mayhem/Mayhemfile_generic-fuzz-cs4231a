@@ -1,0 +1,6 @@
+project: savantenvs/qemu
+target: generic-fuzz-cs4231a
+cmds:
+  - cmd: /mayhem/build/fuzz/qemu-fuzz-i386-target-generic-fuzz-cs4231a
+    libfuzzer: true
+    timeout: 10
